@@ -6,28 +6,47 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
     <script src=" https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
     <title>N Queen algorithm</title>
+
+    <style>
+        .blinking{
+            animation:blinkingText 0.8s infinite;
+        }
+        .queen{
+            background-color: teal;
+        }
+        @keyframes blinkingText{
+            0%{     background-color: #f09292;    }
+            49%{    background-color: #f09292; }
+            60%{    background-color: transparent; }
+            99%{    background-color:transparent;  }
+            100%{   background-color: #f09292;    }
+        }
+    </style>
 </head>
 <body>
-    <div class="ui action input">
-        <input type="text" placeholder="Enter the board size">
-        <button id ="generate" class="ui teal right labeled icon button">
-            <i class="copy icon"></i>
-            Generate
-        </button>
-    </div>
-    <table class="ui celled table">
-        <thead>
+    <div class="ui container">
+        <h1> N Queen Backtracking Visualization</h1>
+        <div class="ui action input">
+            <input type="text" id="size" placeholder="Enter the board size">
+            <button id ="generate" class="ui teal right labeled icon button">
+                <i class="angle double right icon"></i>
+                Generate
+            </button>
+        </div>
+        <table class="ui celled table">
+            <thead>
 
-        </thead>
-        <tbody>
+            </thead>
+            <tbody>
 
-        </tbody>
-    </table>
-    <div class="ui action input">
-        <button id ="start" class="ui teal right labeled icon button">
-            <i class="copy icon"></i>
-            Start algorithm
-        </button>
+            </tbody>
+        </table>
+        <div class="ui action input">
+            <button id ="start" class="ui teal right labeled icon button">
+                <i class="angle double right icon"></i>
+                Visualize
+            </button>
+        </div>
     </div>
     <script src="n-queen.js"></script>
 </body>
